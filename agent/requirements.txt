@@ -3,6 +3,6 @@ langgraph
 bson
 langchain
 langchain-openai
-pymongo
+pymongo==4.10.1
 langchain-community
 youtube-search

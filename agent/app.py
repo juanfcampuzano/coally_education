@@ -23,11 +23,11 @@ app.add_middleware(
  allow_headers=["*"],
 )
 
-@app.get("/health")
+@app.get("/api/health")
 def health():
     return {"status":"ok"}
 
-@app.get("/motivations/{user_id}")
+@app.get("/api/motivations/{user_id}")
 def get_motivations(user_id: str = None):
     try:
         result = graph.checkpointer.get_motivation_for_user(user_id)
@@ -37,7 +37,7 @@ def get_motivations(user_id: str = None):
         return {"message": "Error", "data": {}}
 
 
-@app.post("/init")
+@app.post("/api/init")
 async def init(input_data: InitInput, background_tasks: BackgroundTasks):
     try:
         thread_id = input_data.get("user_id")
@@ -50,7 +50,7 @@ async def init(input_data: InitInput, background_tasks: BackgroundTasks):
         logger.error(f"Error running graph for thread ID {thread_id}", e)
         return {"message": "Error", "data": {}}
 
-@app.get("/graph/{thread_id}")
+@app.get("/api/graph/{thread_id}")
 def get(thread_id: str):
     try:
         config = {"configurable": {"thread_id": thread_id}}
