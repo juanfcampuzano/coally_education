@@ -1,0 +1,70 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+ENV/
+.env/
+.pip/
+*.egg-info/
+
+# Paquetes distribuidos
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+
+# Archivos de configuración de pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de configuración de pytest
+.cache/
+.pytest_cache/
+
+# Archivos de configuración de coverage
+.coverage
+*.cover
+.hypothesis/
+
+# Archivos de configuración de mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Configuración de editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs y archivos temporales
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Archivos de test
+.tox/
+.nox/
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+
+# Archivos de Docker
+Dockerfile
+*.dockerignore
+
+# Variables de entorno
+.env
+.env.*
+
+# Caches de terceros
+.pyre/
+.mypy_cache/
